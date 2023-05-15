@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Digital Clock</title>
+		<link rel="stylesheet" type="text/css" href="DigitalClock.css">
+		<!--[if lt IE 9]>
+		<script>
+			document.createElement("article");
+			document.createElement("aside");
+			document.createElement("footer");
+			document.createElement("header");
+			document.createElement("main");
+			document.createElement("nav");
+			document.createElement("section");
+		</script>
+		<![end if]-->
+	</head>
+	<body>
+	
+		<!-- Tab links -->
+		<div class="tab">
+		  <button class="tablinks" onclick="openTab(event, 'Time')" id="defaultOpen">TIME</button>
+		  <button class="tablinks" onclick="openTab(event, 'Stopwatch')">STOPWATCH</button>
+		  <button class="tablinks" onclick="openTab(event, 'Timer')">TIMER</button>
+		</div>
+
+		<!-- Tab content -->
+		<div id="Time" class="tabcontent">
+		
+			<div id="currentTimeDiv">
+			</div>
+		  
+		</div>
+
+		<div id="Stopwatch" class="tabcontent">
+		
+		  <div id="swTimeDiv">
+			00:00.00
+		  </div>
+		  
+		  <div id="swBtnCollection">
+			<button id="startButton" class="subNavBtn" onclick="startStopwatch()">
+				Start
+			</button>
+			  
+			<button id="stopButton" class="subNavBtn" onclick="stopStopwatch()">
+				Stop
+			</button>
+			  
+			<button id="resetButton" class="subNavBtn" onclick="resetStopwatch()">
+				Reset
+			</button>
+		  </div>
+		  
+		</div>
+
+		<div id="Timer" class="tabcontent">
+		
+		  <form>
+		  
+			  <input id="minutesInput" type="number" /> <span>MINUTES</span>
+			  <input id="secondsInput" type="number" /> <span>SECONDS</span>
+		  
+		  </form>
+		  
+		  <div id="timerTimeDiv">
+			00:00
+		  </div>
+		  
+		  <div id="timerBtnCollection">
+			<button id="timerStartButton" class="subNavBtn" onclick="setStartTime()">
+				Start
+			</button>
+			  
+			<button id="timerStopButton" class="subNavBtn" onclick="stopTimer()">
+				Stop
+			</button>
+			
+			<button id="timerResetButton" class="subNavBtn" onclick="resetTimer()">
+				Reset
+			</button>
+		</div>
+	
+		<script src="DigitalClock.js"></script>
+	</body>
+</html>
